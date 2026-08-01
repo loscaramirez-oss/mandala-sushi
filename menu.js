@@ -13,6 +13,13 @@ const CONFIG = {
   banner: "Pide por WhatsApp"
 };
 
+const ROLLS169 = [
+  "Banana Roll", "Geisha", "California Roll", "Philadelphia Roll",
+  "Chipotle Roll", "Nori Maki", "Yasai Tempura", "Furai de Arrachera",
+  "Furai de Surimi", "Furai de Pollo", "Yoko Roll", "Fresita Maki",
+  "Kiroi Pollito", "Daisuki", "Nevadito", "Okinawa"
+];
+
 const MENU = [
   {
     name: "Entradas",
@@ -196,6 +203,18 @@ const MENU = [
       { name: "Nori Maki", desc: "PF: alga. PD: philadelphia, pepino, aguacate y surimi.", price: 90 },
       { name: "Yasai Tempura", desc: "PF: verduras capeadas. PD: philadelphia, pepino, aguacate y surimi.", price: 90 },
       { name: "Nevadito", desc: "PF: philadelphia. PD: camarón empanizado y aguacate.", price: 99 }
+    ]
+  },
+  {
+    name: "Paquetes y Promos",
+    items: [
+      { name: "2 Rollos x $169", desc: "Elige 2 rollos de la lista. Puedes repetir el mismo.", price: 169, package: { count: 2, rolls: ROLLS169 } },
+      { name: "Paquete Individual", desc: "1 rollo a elegir + 1 orden de papas a la francesa + 1 té.", price: 129, package: { count: 1, rolls: ROLLS169 } },
+      { name: "Paquete Pareja", desc: "2 rollos a elegir (puedes repetir el mismo) + 2 yakimeshi de pollo o vegetariano + 2 pzas. de dedos gouda.", price: 289, package: { count: 2, rolls: ROLLS169 } },
+      { name: "Paquete Familiar", desc: "4 rollos a elegir (puedes repetir el mismo) + 2 yakimeshi de pollo + 3 dedos philadelphia + 1 orden de panchitos jalapeños con philadelphia.", price: 499, package: { count: 4, rolls: ROLLS169 } },
+      { name: "Paquete 4", desc: "2 Furai de Surimi (empanizados) + 2 California (fríos).", price: 279 },
+      { name: "Paquete Godín", desc: "1 Furai de Surimi + 1 dedo gouda + 1 té Nestea.", price: 109 },
+      { name: "Mandala Box", desc: "3 rollos fijos: California, Kiroi Pollito y Furai de Arrachera. Incluye 1 orden de papas a la francesa, 4 tiras de pollo, 4 onigiris empanizados de philadelphia y 1 rollito primavera.", price: 399 }
     ]
   },
   {
