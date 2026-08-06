@@ -34,6 +34,7 @@
       </div>
     </div>
     <div class="hd-actions">
+      <button class="btn btn-primary" id="newOrderBtn">➕ Nuevo pedido</button>
       <label class="switch" title="Sonido al llegar un pedido">
         <input type="checkbox" id="soundToggle" checked>
         <span>🔔</span>
@@ -52,14 +53,88 @@
   <div class="filters">
     <label class="chk"><input type="checkbox" id="onlyNew"> Solo nuevos</label>
     <label class="chk"><input type="checkbox" id="showArch"> Ver archivados</label>
+    <label class="chk" title="Imprimir ticket automáticamente al llegar un pedido"><input type="checkbox" id="autoPrintToggle" checked> 🖨 Auto</label>
     <span class="refresh-note" id="refreshNote"></span>
   </div>
 
   <div id="orders" class="orders"></div>
 </div>
 
-<div class="toast hidden" id="toast"></div>
+<div class="modal hidden" id="newOrderModal">
+  <div class="modal-card">
+    <div class="modal-head">
+      <h2>➕ Nuevo pedido</h2>
+      <button class="btn ghost" id="closeNewBtn">✕</button>
+    </div>
+    <div class="modal-body">
 
+      <div class="seg" id="segType">
+        <button class="seg-btn on" data-t="restaurante">🍽 Restaurante</button>
+        <button class="seg-btn" data-t="llevar">🛍 Para llevar</button>
+        <button class="seg-btn" data-t="domicilio">🛵 Domicilio</button>
+      </div>
+
+      <div class="frow" id="rowMesa">
+        <label>Mesa</label>
+        <input type="number" id="noMesa" value="1" min="1">
+      </div>
+
+      <div class="frow">
+        <label>Nombre (opcional)</label>
+        <input type="text" id="noName" placeholder="Nombre del cliente">
+      </div>
+
+      <div class="frow" id="rowPhone">
+        <label>Teléfono</label>
+        <input type="text" id="noPhone" placeholder="999 000 0000">
+      </div>
+
+      <div class="frow" id="rowAddr">
+        <label>Dirección</label>
+        <input type="text" id="noAddr" placeholder="Calle, número, colonia...">
+      </div>
+
+      <div class="frow">
+        <label>Pago</label>
+        <select id="noPay">
+          <option>Efectivo</option>
+          <option>Tarjeta</option>
+          <option>Transferencia</option>
+        </select>
+      </div>
+
+      <div class="picker">
+        <input type="text" id="noSearch" placeholder="🔍 Buscar platillo...">
+        <div class="tabs" id="noTabs"></div>
+        <div class="p-grid" id="noGrid"></div>
+        <div class="variant-overlay hidden" id="noVariant">
+          <div class="variant-card" id="noVariantList"></div>
+        </div>
+      </div>
+
+      <div class="frow">
+        <label>Notas</label>
+        <input type="text" id="noNotes" placeholder="Ej. sin cebolla">
+      </div>
+
+      <div class="no-cart">
+        <div class="no-cart-head"><h3>Pedido</h3><button class="btn ghost" id="noClear">Vaciar</button></div>
+        <div id="noItems"></div>
+        <div class="no-total">Total: <b id="noTotal">$0</b></div>
+      </div>
+
+    </div>
+    <div class="modal-foot">
+      <button class="btn btn-primary" id="saveOrderBtn">📨 Guardar y enviar a cocina</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast hidden" id="toast"></div>
+<div class="print-area" id="printArea"></div>
+
+<script src="../js/config/brand-config.js"></script>
+<script src="../js/data/menu-data.js"></script>
 <script src="admin.js"></script>
 </body>
 </html>

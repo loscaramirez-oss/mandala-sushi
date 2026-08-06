@@ -28,7 +28,8 @@
           key: c.key,
           name: c.name,
           qty: c.qty,
-          price: c.price
+          price: c.price,
+          desc: c.desc || ""
         })),
         total: fields.total
       };
