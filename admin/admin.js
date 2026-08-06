@@ -289,6 +289,8 @@ const PIN = "1234";
       payment: $("noPay").value,
       notes: ($("noNotes").value || "").trim(),
       salsas: "",
+      palitos: "No",
+      marca: (BRAND.marca || ""),
       items: newOrder.cart.map(c => ({
         key: c.key,
         name: c.name,
@@ -316,7 +318,7 @@ const PIN = "1234";
   /* ---------- API ---------- */
   async function fetchOrders() {
     if (!SUPABASE_URL || !SUPABASE_KEY) return [];
-    const q = API + "?select=*&order=created_at.desc&limit=200";
+    const q = API + "?select=*&marca=eq." + encodeURIComponent(BRAND.marca || "") + "&order=created_at.desc&limit=200";
     const r = await fetch(q, { headers: HEADERS });
     if (!r.ok) throw new Error("HTTP " + r.status);
     return r.json();
