@@ -1,0 +1,2 @@
+Coloca aquí las fotos de los platillos (formato .jpg o .png).
+Para usarlas agrega el campo "photo": "img/mi-foto.jpg" en el platillo dentro de js/data/menu-data.js.

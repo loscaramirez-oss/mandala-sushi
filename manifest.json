@@ -1,0 +1,15 @@
+{
+  "name": "Mandala Sushi Caucel",
+  "short_name": "Mandala",
+  "description": "Pide en Mandala Sushi Caucel por WhatsApp. Sushi, ramen, rollos y más.",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#fbf7f8",
+  "theme_color": "#e8367c",
+  "lang": "es",
+  "icons": [
+    { "src": "logo.png", "sizes": "1536x1536", "type": "image/png", "purpose": "any" }
+  ]
+}
