@@ -8,6 +8,7 @@
   global.PosApp = global.PosApp || {};
   global.PosApp.brandConfig = {
     business: "Mandala Sushi Caucel",
+    marca: "mandala",
     address: "",
     whatsapp: "529993168027",
     phoneDisplay: "999 316 8027",

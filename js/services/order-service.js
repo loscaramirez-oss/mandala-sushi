@@ -24,6 +24,8 @@
         payment: fields.payment,
         notes: fields.notes || "",
         salsas: fields.salsas || "",
+        palitos: fields.palitos || "",
+        marca: fields.marca || "",
         items: (fields.cart || []).map(c => ({
           key: c.key,
           name: c.name,
@@ -85,6 +87,8 @@
           payment: record.payment,
           notes: record.notes || "",
           salsas: record.salsas || "",
+          palitos: record.palitos || "",
+          marca: record.marca || "",
           items: record.items,
           total: record.total
         })

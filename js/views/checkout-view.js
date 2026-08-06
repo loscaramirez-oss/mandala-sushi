@@ -99,7 +99,7 @@
         if (espec) address += " (" + espec + ")";
       }
 
-      return { name, phone, address, notes, salsas };
+      return { name, phone, address, notes, salsas, orderType: this.orderType, payment: this.payment, palitos: this.palitos };
     }
 
     send() {

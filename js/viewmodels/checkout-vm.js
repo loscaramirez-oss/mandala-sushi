@@ -50,6 +50,8 @@
         payment: form.payment,
         notes: form.notes,
         salsas: form.salsas,
+        palitos: form.palitos,
+        marca: this._brand.marca,
         cart,
         total: this._cart.total(cart)
       });
